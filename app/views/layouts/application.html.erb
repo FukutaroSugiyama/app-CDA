@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CharacterDistanceApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- header -->
+        <header>
+            <div class="header-content">
+                <div class="header-icon">
+                    <a href="/">
+                            <p><span>C</span>haracter</p>
+                            <p><span>D</span>istance</p>
+                            <p><span>A</span>pplication</p>
+                    </a>
+                </div>
+                    <ul>
+                        <li>
+                            <a href="/signup">
+                                <p class="header-menu">signup</p>
+                                <p>サインアップ</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/login">
+                                <p class="header-menu">login</p>
+                                <p>ログイン</p>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        </header>
+    
+    <%= yield %>
+  </body>
+</html>

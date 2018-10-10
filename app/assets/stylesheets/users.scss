@@ -1,0 +1,87 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, div, p, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* new */
+.container {
+    width: 710px;
+    margin: 0 auto;
+}
+
+.form-heading {
+    border-top: 3px solid black;
+    margin-top: 35px;
+    height: 90px;
+}
+
+.form-heading h2 {
+    display: inline-block;
+    float:left;
+}
+
+.form-heading p {
+    color: #666666;
+    font-size: 14px;
+    display: inline-block;
+    margin: 11px 0 0 20px;
+    
+}
+
+.form-body {
+    width: 710px;
+    text-align: center;
+}
+
+.form-menu {
+    width: 710px;
+    height: 95px;
+    border-top: 1px solid #999999;
+    
+}
+
+.form-table {
+    width: 710px;
+    border-bottom: 1px solid #999999;
+}
+
+.form-name {
+    width: 220px;
+    float: left;
+    background: #F6F6F6;
+    display: inline-block;
+}
+
+.form-value {
+    width: 470px;
+    float: left;
+    text-align: left;
+}
+
+.form-body p {
+    width: 190px;
+    padding: 35px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-table input {
+    width: 300px;
+    margin: 33px 15px;
+    text-align: left;
+    height: 25px;
+    
+}
+
+.form-body input[type="submit"] {
+    cursor: pointer;
+    width: 305px;
+    height: 35px;
+    margin: 50px 0 50px 67px;
+    
+}
