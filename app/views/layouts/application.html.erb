@@ -33,10 +33,62 @@
                                 <p>ログイン</p>
                             </a>
                         </li>
+                        <li>
+                            <a href="/">
+                                <p class="header-menu">new post</p>
+                                <p>新規投稿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <p class="header-menu">Total distance</p>
+                                <p>総文字距離</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout">
+                                <p class="header-menu">logout</p>
+                                <p>ログアウト</p>
+                            </a>
+                        </li>
                     </ul>
             </div>
         </header>
     
     <%= yield %>
+    
+    <!-- footer -->
+        <footer>
+            <div class="footer-container">
+                <ul>
+                    <li><a href="/">CDA</a></li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="/signup">signup</a>
+                            </li>
+                            <li>
+                                <a href="/login">login</a>
+                            </li>
+                            <li>
+                                <a href="/">new post</a>
+                            </li>
+                            <li>
+                                <a href="/">Total distance</a>
+                            </li>
+                            <li>
+                                <a href="/logout">logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        
+        
+        <!-- copyright -->
+        <div class="copyright">
+            <p>Copyright © 2018 CDA All Rights Reserved.</p>
+        </div>
   </body>
 </html>
