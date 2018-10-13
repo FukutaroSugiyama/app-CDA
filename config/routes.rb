@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   get "users/:id" => "users#show"
   
+  get "posts/total" => "posts#total"
+  
+  
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
