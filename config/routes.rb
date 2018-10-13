@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show"
   
   get "posts/total" => "posts#total"
+  get "posts/new" => "posts#new"
   
   
   

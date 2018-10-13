@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="/character_distance_app/app/assets/stylesheets/posts.scss">
+    </head>
+    
+    <body>
+        
+        <div class="posts-new">
+            <div class="container">
+                
+                <div class="heading">
+                    <h2>user name</h2>
+                </div>
+                
+                <div class="posts-container">
+                    <%= form_tag("/posts/new") do %>
+                        <div class="posts-form">
+                            <textarea name="string"></textarea>
+                        </div>
+                        <input type="submit" value="新規投稿">
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

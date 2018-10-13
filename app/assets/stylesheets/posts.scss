@@ -1,3 +1,52 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, div, p, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* total */
+.container {
+    width: 710px;
+    margin: 0 auto;
+}
+
+.heading {
+    border-top: 3px solid black;
+    margin-top: 35px;
+    height: 90px;
+}
+
+.counter {
+    text-align: center;
+}
+
+.main-counter {
+    font-size: 30px;
+    
+}
+
+.sub-counter {
+    margin: 35px;
+}
+
+/* posts-new */
+
+.posts-container {
+    text-align: center;
+}
+
+.posts-container textarea {
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
+}
+
+.posts-container input[type="submit"] {
+    cursor: pointer;
+    width: 305px;
+    height: 35px;
+    margin: 10px;
+}
