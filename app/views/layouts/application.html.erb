@@ -34,6 +34,11 @@
                             </a>
                         </li>
                         <li>
+                            <%= link_to "/users/#{@current_user.id}", {class: "header-menu"} do %>
+                                mypage<br>マイページ
+                            <% end %>
+                        </li>
+                        <li>
                             <a href="/posts/new">
                                 <p class="header-menu">new post</p>
                                 <p>新規投稿</p>
@@ -46,14 +51,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/logout">
-                                <p class="header-menu">logout</p>
-                                <p>ログアウト</p>
-                            </a>
+                            <%= link_to "/logout", {class: "header-menu",method: :post} do %>
+                                logout<br>ログアウト
+                            <% end %>
                         </li>
                     </ul>
             </div>
         </header>
+        
+        <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
     
     <%= yield %>
     
@@ -70,11 +80,12 @@
                             <li>
                                 <a href="/login">login</a>
                             </li>
+                            
                             <li>
-                                <a href="/">new post</a>
+                                <a href="/posts/new">new post</a>
                             </li>
                             <li>
-                                <a href="/">Total distance</a>
+                                <a href="/posts/total">Total distance</a>
                             </li>
                             <li>
                                 <a href="/logout">logout</a>

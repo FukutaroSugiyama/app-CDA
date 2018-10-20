@@ -12,15 +12,15 @@
             <div class="container">
                 
                 <div class="heading">
-                    <h2>user name と仲間たち</h2>
+                    <h2><%= @user.name %> と仲間たち</h2>
                 </div>
                 
                 <div class="counter">
                     <div class="main-counter">
-                        <p>123456.789m</p>
+                        <p><%= @total_distance %>m</p>
                     </div>
                     <div class="sub-counter">
-                        <p>月に到着！月旅行を楽しみましょう～</p>
+                        <p><%= @total_puts %></p>
                     </div>
                 </div>
                

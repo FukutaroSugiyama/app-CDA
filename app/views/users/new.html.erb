@@ -17,6 +17,11 @@
                 <div class="form-body">
                     
                     <!-- error-message -->
+                    <% @user.errors.full_messages.each do |message| %>
+                        <div class="form-error">
+                            <%= message %>
+                        </div>
+                    <% end %>
                     
                     <!-- signup page -->
                     <%= form_tag("/users/create") do %>
@@ -26,7 +31,7 @@
                                     <p>ユーザー名</p>
                                 </div>
                                 <div class="form-value">
-                                    <input name="user_id">
+                                    <input name="name">
                                 </div>
                             </div>
                             <div class="form-menu">
@@ -42,7 +47,7 @@
                                     <p>パスワード</p>
                                 </div>
                                 <div class="form-value">
-                                    <input name="passward">
+                                    <input type="password" name="password">
                                 </div>
                             </div>
                         </div>

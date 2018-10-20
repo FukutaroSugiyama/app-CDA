@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   get "login" => "users#login_form"
   post "users/create" => "users#create"
   post "login" => "users#login"
+  post "logout" => "users#logout"
   get "users/:id" => "users#show"
   
   get "posts/total" => "posts#total"
   get "posts/new" => "posts#new"
+  post "posts/create" => "posts#create"
   
   
   
