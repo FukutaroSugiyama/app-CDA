@@ -20,7 +20,7 @@
                         <p>合計距離</p>
                     </div>
                     <div class="total-distance-right">
-                        <p><%= @total_distance %>m</p>
+                        <p><%= @total_distance.sum_user_contentdistance(@posts) %>m</p>
                     </div>
                 </div>
                 

@@ -25,15 +25,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @posts = Post.where(user_id: @user.id)
-    
-    
-    @total_distance = 0
-    
-    for @var in @posts do
-      @distance = @var.content_distance
-      @total_distance += @distance
-    end
-    
+    @total_distance = User.new
   end
 
   def login

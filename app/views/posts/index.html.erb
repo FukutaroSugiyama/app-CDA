@@ -17,10 +17,10 @@
                 
                 <div class="counter">
                     <div class="main-counter">
-                        <p><%= @total_distance %>m</p>
+                        <p><%= @total_distance.sum_of_totaldistance %>m</p>
                     </div>
                     <div class="sub-counter">
-                        <p><%= @total_puts %></p>
+                        <p><%= @total_puts.case_totalputs(@total_distance.sum_of_totaldistance) %></p>
                     </div>
                 </div>
                

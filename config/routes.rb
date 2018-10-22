@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   get "users/:id" => "users#show"
   
-  get "posts/total" => "posts#total"
+  get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
   
