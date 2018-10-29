@@ -24,5 +24,20 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
+    
+    def edit
+      @post = Post.find_by(id: params[:id])
+    end
+    
+    def update
+      @post = Post.find_by(id: params[:id])
+      @post.content = params[:string]
+      @post.content_distance = @post.sum_of_contentdistance(params[:string])
+      @post.save
+      redirect_to("/users/#{@post.user_id}")
+    end
+    
+    def destroy
+    end
   end
 end
