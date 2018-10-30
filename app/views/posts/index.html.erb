@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="/character_distance_app/app/assets/stylesheets/posts.scss">
+    </head>
+    
+    <body>
+        
+        <div class="total-total-distance">
+            <div class="container">
+                
+                <div class="heading">
+                    <h2><%= @user.name %> と仲間たち</h2>
+                </div>
+                
+                <div class="counter">
+                    <div class="main-counter">
+                        <p><%= @total_distance.sum_of_totaldistance %>m</p>
+                    </div>
+                    <div class="sub-counter">
+                        <p><%= @total_puts.case_totalputs(@total_distance.sum_of_totaldistance) %></p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </body>
+</html>

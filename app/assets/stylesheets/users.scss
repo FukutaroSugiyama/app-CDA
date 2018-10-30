@@ -83,7 +83,10 @@ html, body, div, p, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, form, fields
     width: 305px;
     height: 35px;
     margin: 50px 0 50px 67px;
-    
+}
+
+.form-error {
+  color: #ff4d75;
 }
 
 /* users-show */
@@ -128,6 +131,13 @@ html, body, div, p, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, form, fields
     width: 33%;
     float: left;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+.posts-string a {
+    color: black;
 }
 
 .posts-distance {

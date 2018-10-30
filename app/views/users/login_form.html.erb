@@ -17,6 +17,11 @@
                 <div class="form-body">
                     
                     <!-- error-message -->
+                    <% if @error_message %>
+                      <div class="form-error">
+                        <%= @error_message %>
+                      </div>
+                    <% end %>
                     
                     <!-- login page -->
                     <%= form_tag("/login") do %>
@@ -26,7 +31,7 @@
                                     <p>メールアドレス</p>
                                 </div>
                                 <div class="form-value">
-                                    <input name="email">
+                                    <input name="email" value="<%= @email %>">
                                 </div>
                             </div>
                             <div class="form-menu">
@@ -34,7 +39,7 @@
                                     <p>パスワード</p>
                                 </div>
                                 <div class="form-value">
-                                    <input name="passward">
+                                    <input type="password" name="password" value="<%= @password %>">
                                 </div>
                             </div>
                         </div>

@@ -21,39 +21,52 @@
                     </a>
                 </div>
                     <ul>
-                        <li>
-                            <a href="/signup">
-                                <p class="header-menu">signup</p>
-                                <p>サインアップ</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/login">
-                                <p class="header-menu">login</p>
-                                <p>ログイン</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <p class="header-menu">new post</p>
-                                <p>新規投稿</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <p class="header-menu">Total distance</p>
-                                <p>総文字距離</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/logout">
-                                <p class="header-menu">logout</p>
-                                <p>ログアウト</p>
-                            </a>
-                        </li>
+                        <% if @current_user %>
+                            <li>
+                                <%= link_to "/users/#{@current_user.id}", {class: "header-menu"} do %>
+                                    mypage<br>マイページ
+                                <% end %>
+                            </li>
+                            <li>
+                                <a href="/posts/new">
+                                    <p class="header-menu">new post</p>
+                                    <p>新規投稿</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/posts/index">
+                                    <p class="header-menu">Total distance</p>
+                                    <p>総文字距離</p>
+                                </a>
+                            </li>
+                            <li>
+                                <%= link_to "/logout", {class: "header-menu",method: :post} do %>
+                                    logout<br>ログアウト
+                                <% end %>
+                            </li>
+                        <% else %>
+                            <li>
+                                <a href="/signup">
+                                    <p class="header-menu">signup</p>
+                                    <p>サインアップ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login">
+                                    <p class="header-menu">login</p>
+                                    <p>ログイン</p>
+                                </a>
+                            </li>
+                        <% end %>
                     </ul>
             </div>
         </header>
+        
+        <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
     
     <%= yield %>
     
@@ -61,24 +74,29 @@
         <footer>
             <div class="footer-container">
                 <ul>
-                    <li><a href="/">CDA</a></li>
+                    <li>
+                        <a href="/">CDA</a>
+                    </li>
                     <li>
                         <ul>
-                            <li>
-                                <a href="/signup">signup</a>
-                            </li>
-                            <li>
-                                <a href="/login">login</a>
-                            </li>
-                            <li>
-                                <a href="/">new post</a>
-                            </li>
-                            <li>
-                                <a href="/">Total distance</a>
-                            </li>
-                            <li>
-                                <a href="/logout">logout</a>
-                            </li>
+                            <% if @current_user %>
+                                <li>
+                                    <a href="/posts/new">new post</a>
+                                </li>
+                                <li>
+                                    <a href="/posts/index">Total distance</a>
+                                </li>
+                                <li>
+                                    <a href="/logout">logout</a>
+                                </li>
+                            <% else %>
+                                <li>
+                                    <a href="/signup">signup</a>
+                                </li>
+                                <li>
+                                    <a href="/login">login</a>
+                                </li>
+                            <% end %>
                         </ul>
                     </li>
                 </ul>

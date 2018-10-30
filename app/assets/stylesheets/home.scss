@@ -59,13 +59,9 @@ span {
     width: 145px;
     height: 124px;
     text-align: center;
+    padding-top: 35px;
+    box-sizing: border-box;
 }
-
-.header-menu {
-    
-    margin: 35px 0 0 0;
-}
-
 
 
 /* top-picture */
@@ -158,4 +154,13 @@ footer {
     text-align: center;
     background-color: #242424;
     font-size: 12px;
+}
+/* フラッシュ */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: black;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
 }
