@@ -10,7 +10,11 @@
                         <div class="posts-form">
                             <textarea name="string"><%= @post.content %></textarea>
                         </div>
-                        <input type="submit" value="編集">
+                        <input type="submit" value="保存">
+                    <% end %>
+                    <p>or</p>
+                    <%= form_tag("/posts/#{@post.id}/destroy") do %>
+                        <input type="submit" value="削除">
                     <% end %>
                 </div>
             </div>
