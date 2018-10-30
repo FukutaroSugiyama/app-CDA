@@ -27,21 +27,21 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find(params[:id])
     @post.content = params[:string]
     @post.content_distance = @post.sum_of_contentdistance(params[:string])
     @post.save
-    redirect_to("/users/#{@post.user_id}")
+    redirect_to("/users/#{post.user_id}")
   end
 
   def destroy
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find(params[:id])
     @post.destroy
     flash[:notice] = "投稿を削除しました"
-    redirect_to("/users/#{@post.user_id}")
+    redirect_to("/users/#{post.user_id}")
   end
 end
