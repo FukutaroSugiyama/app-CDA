@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    validates :name, {presence: true}
+    validates :email, {presence: true, uniqueness: true}
+    
     def sum_user_contentdistance(user_posts)
         user_total_distance = 0
         for var in user_posts do
