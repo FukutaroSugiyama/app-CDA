@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user,{only: [:new, :create, :edit, :update, :destroy]}
+  
   def index
     @user = User.find_by(id: session[:user_id])
     @total_distance = Post.new
@@ -43,5 +45,12 @@ class PostsController < ApplicationController
     post.destroy
     flash[:notice] = "投稿を削除しました"
     redirect_to("/users/#{post.user_id}")
+  end
+  
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "権限がありません"
+      redirect_to("/posts/index")
+    end
   end
 end

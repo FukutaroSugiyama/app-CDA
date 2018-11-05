@@ -1,4 +1,9 @@
 class Post < ApplicationRecord
+  with_options presence: true do
+    validates :content
+    validates :user_id
+  end
+  
     def sum_of_totaldistance
         posts = Post.all
         total_distance =0
